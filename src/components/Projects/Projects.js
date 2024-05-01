@@ -6,7 +6,7 @@ import leaf from "../../Assets/Projects/leaf.png";
 import SN from "../../Assets/Projects/SN.png";
 import fb from "../../Assets/Projects/fb.png";
 import noblenonprofit from "../../Assets/Projects/noblenonprofit.png";
-import suicide from "../../Assets/Projects/suicide.png";
+import chatbot from "../../Assets/Projects/chatbot.png";
 import Portfolio from "../../Assets/Portfolio.png";
 
 function Projects() {
@@ -65,7 +65,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={suicide}
+              imgPath={chatbot}
               isBlog={false}
               title="Chatbot"
               description="A chatbot is a computer program that simulates human conversation with an end user. Not all chatbots are equipped with artificial intelligence (AI), but modern chatbots increasingly use conversational AI techniques such as natural language processing (NLP) to understand user questions and automate responses to them."
@@ -79,7 +79,7 @@ function Projects() {
               isBlog={false}
               title="Sign Language"
               description="Sign language is manual communication commonly used by people who are deaf. Sign language is not universal; people who are deaf from different countries speak different sign languages. The gestures or symbols in sign language are organized in a linguistic way."
-              ghLink="https://github.com/pibarel27/SignLanguage"
+              ghLink="https://github.com/pibarel27/Sign-Language"
             />
           </Col>
         </Row>
