@@ -94,7 +94,7 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                href="https://vercel.com/pibarel-maisnams-projects/noble-nonprofit-front-end"
+                href="https://vercel.com/pibarel-maisnams-projects"
                 target="_blank"
                 rel="noreferrer"
               >
