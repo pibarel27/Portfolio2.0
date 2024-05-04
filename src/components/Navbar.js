@@ -85,7 +85,7 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/resume"
+                to="/My Resume"
                 onClick={() => updateExpanded(false)}
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
@@ -94,7 +94,7 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                href="https://vercel.com/pibarel-maisnams-projects/noble-nonprofit-front-end"
+                href="https://vercel.com/pibarel-maisnams-projects"
                 target="_blank"
                 rel="noreferrer"
               >
