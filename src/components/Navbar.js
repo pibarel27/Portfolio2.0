@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
@@ -28,7 +28,21 @@ function NavBar() {
     }
   }
 
-  window.addEventListener("scroll", scrollHandler);
+  useEffect(() => {
+    function handleDocumentClick(event) {
+      if (expand && !event.target.closest(".navbar")) {
+        updateExpanded(false);
+      }
+    }
+
+    window.addEventListener("scroll", scrollHandler);
+    document.addEventListener("click", handleDocumentClick);
+
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+      document.removeEventListener("click", handleDocumentClick);
+    };
+  }, [expand]);
 
   return (
     <Navbar
@@ -99,7 +113,6 @@ function NavBar() {
                 rel="noreferrer"
               >
                 <ImBlog style={{ marginBottom: "2px" }} /> Thesis
-
               </Nav.Link>
             </Nav.Item>
 
