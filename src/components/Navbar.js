@@ -108,11 +108,11 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                href="https://www.slideshare.net/slideshow/development-of-chatbot-using-ai-ml-technologies-under-the-guidance-of-mr-chiranjiv-chinganbam-assistant-professor-manipur-technical-university/270010951"
+                href="https://blog-seven-gamma-72.vercel.app"
                 target="_blank"
                 rel="noreferrer"
               >
-                <ImBlog style={{ marginBottom: "2px" }} /> Thesis
+                <ImBlog style={{ marginBottom: "2px" }} /> Blog
               </Nav.Link>
             </Nav.Item>
 
