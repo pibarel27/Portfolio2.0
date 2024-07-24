@@ -108,7 +108,7 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                href="https://blog-seven-gamma-72.vercel.app"
+                href="https://pibablog.vercel.app"
                 target="_blank"
                 rel="noreferrer"
               >
