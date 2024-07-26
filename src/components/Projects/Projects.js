@@ -26,7 +26,7 @@ function Projects() {
             <ProjectCard
               imgPath={ChinguLyrics}
               isBlog={false}
-              title="Noble Nonprofit"
+              title="Chingu Lyrics"
               description="
               This is a Song lyrics Webpage. This Webpage is based on ReactsJs and HTML & CSS.."
               ghLink="https://chingu-lyrics.vercel.app"
