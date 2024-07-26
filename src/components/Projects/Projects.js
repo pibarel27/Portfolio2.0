@@ -8,7 +8,7 @@ import fb from "../../Assets/Projects/fb.png";
 import noblenonprofit from "../../Assets/Projects/noblenonprofit.png";
 import chatbot from "../../Assets/Projects/chatbot.png";
 import Portfolio from "../../Assets/Portfolio.png";
-import ChinguLyrics from "../../Assets/ChinguLyrics"
+import ChinguLyrics from "../../Assets/ChingLyrics.png"
 
 function Projects() {
   return (
