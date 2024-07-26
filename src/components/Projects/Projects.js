@@ -8,6 +8,7 @@ import fb from "../../Assets/Projects/fb.png";
 import noblenonprofit from "../../Assets/Projects/noblenonprofit.png";
 import chatbot from "../../Assets/Projects/chatbot.png";
 import Portfolio from "../../Assets/Portfolio.png";
+import ChinguLyrics from "../../Assets/ChinguLyrics"
 
 function Projects() {
   return (
@@ -21,6 +22,17 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+        <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={ChinguLyrics}
+              isBlog={false}
+              title="Noble Nonprofit"
+              description="
+              This is a Song lyrics Webpage. This Webpage is based on ReactsJs and HTML & CSS.."
+              ghLink="https://chingu-lyrics.vercel.app"
+              
+            />
+          </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={noblenonprofit}
