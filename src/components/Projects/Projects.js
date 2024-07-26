@@ -27,8 +27,7 @@ function Projects() {
               imgPath={ChinguLyrics}
               isBlog={false}
               title="Chingu Lyrics"
-              description="
-              This is a Song lyrics Webpage. This Webpage is based on ReactsJs and HTML & CSS.."
+              description="This project is a feature-rich music-lyrics player built using ReactJS, designed to provide users with a seamless and immersive music listening experience. The core functionality of the music player includes play, pause, next, previous and Guitar Chords track controls, but it goes beyond that by offering real-time lyrics synchronization for an enhanced music experience."
               ghLink="https://chingu-lyrics.vercel.app"
               
             />
