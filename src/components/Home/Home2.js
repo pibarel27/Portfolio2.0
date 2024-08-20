@@ -6,6 +6,7 @@ import {
   AiFillGithub,
   AiOutlineTwitter,
   AiFillInstagram,
+  AiOutlineWhatsApp,
   AiFillFacebook,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -114,6 +115,16 @@ function Home2() {
                   className="icon-colour home-social-icons"
                 >
                   <AiFillFacebook />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://wa.me/+918595089569"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour home-social-icons"
+                >
+                  <AiOutlineWhatsApp />
                 </a>
               </li>
             </ul>
