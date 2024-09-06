@@ -9,6 +9,7 @@ import noblenonprofit from "../../Assets/Projects/noblenonprofit.png";
 import chatbot from "../../Assets/Projects/chatbot.png";
 import Portfolio from "../../Assets/Portfolio.png";
 import ChinguLyrics from "../../Assets/ChingLyrics.png"
+import CS from "../../Assets/Projects/CS.png"
 
 function Projects() {
   return (
@@ -22,6 +23,15 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+        <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={CS}
+              isBlog={false}
+              title="Chingu Shoppe"
+              description="Chingu Shoppe is a fully responsive ecommerce website, maximum compatiblities in all mobile devices, built with ReactJs"
+              ghLink="https://chingu-shoppe.vercel.app/"
+            />
+          </Col>
         <Col md={4} className="project-card">
             <ProjectCard
               imgPath={ChinguLyrics}
