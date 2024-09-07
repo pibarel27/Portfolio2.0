@@ -28,7 +28,7 @@ function Projects() {
               imgPath={CS}
               isBlog={false}
               title="Chingu Shoppe"
-              description="Chingu Shoppe is a fully responsive ecommerce website, maximum compatiblities in all mobile devices, built with ReactJs"
+              description="Chingu Shoppe is a fully responsive dynamic ecommerce website, maximum compatiblities in all mobile devices, built with ReactJs"
               ghLink="https://chingu-shoppe.vercel.app/"
             />
           </Col>
