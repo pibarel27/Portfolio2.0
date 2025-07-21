@@ -66,7 +66,7 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href="https://www.instagram.com/_pibarel/"
+                href="https://www.instagram.com/__cooldude69/"
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -76,7 +76,7 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href="https://www.facebook.com/pibarel27"
+                href="https://www.facebook.com/piba27"
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"

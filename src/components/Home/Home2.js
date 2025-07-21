@@ -99,7 +99,7 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.instagram.com/_pibarel/"
+                  href="https://www.instagram.com/__cooldude69/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
@@ -109,7 +109,7 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.facebook.com/pibarel27"
+                  href="https://www.facebook.com/piba27"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
