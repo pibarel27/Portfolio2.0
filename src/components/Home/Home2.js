@@ -125,6 +125,23 @@ function Home2() {
     transition: transform 0.3s ease;
   }
 
+  @media (max-width: 768px) {
+
+  .home-about-description {
+    text-align: center;
+  }
+
+  .myAvtar {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .avatar-img {
+    max-width: 200px;
+  }
+
+}
+
   .floating-avatar {
     animation: float 4s ease-in-out infinite;
   }
