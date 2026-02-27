@@ -136,9 +136,9 @@ function Footer() {
 
   /* 🔥 Smaller circle */
   .footer-icons .social-icons a {
-    font-size: 0.85rem;        /* smaller icon */
-    width: 32px;               /* smaller circle */
-    height: 32px;              /* smaller circle */
+    font-size: 0.85rem;        
+    width: 32px;               
+    height: 32px;              
     display: flex;
     align-items: center;
     justify-content: center;
