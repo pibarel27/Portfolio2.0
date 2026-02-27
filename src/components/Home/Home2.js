@@ -108,10 +108,25 @@ function Home2() {
     color: white;
   }
 
+  /* 🔥 ADDED */
+  @media (max-width: 992px) {
+    .upgraded-section {
+      padding: 60px 20px;
+    }
+  }
+
   .about-title {
     font-size: 2.6em;
     font-weight: 700;
     margin-bottom: 20px;
+  }
+
+  /* 🔥 ADDED */
+  @media (max-width: 768px) {
+    .about-title {
+      font-size: 2em;
+      text-align: center;
+    }
   }
 
   .home-about-body {
@@ -120,27 +135,31 @@ function Home2() {
     opacity: 0.9;
   }
 
+  /* 🔥 ADDED */
+  @media (max-width: 768px) {
+    .home-about-body {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+
   .avatar-img {
     max-width: 250px;
     transition: transform 0.3s ease;
   }
 
-  @media (max-width: 768px) {
-
-  .home-about-description {
-    text-align: center;
+  /* 🔥 ADDED */
+  @media (max-width: 992px) {
+    .avatar-img {
+      max-width: 220px;
+    }
   }
 
-  .myAvtar {
-    margin-top: 30px;
-    text-align: center;
+  @media (max-width: 576px) {
+    .avatar-img {
+      max-width: 180px;
+    }
   }
-
-  .avatar-img {
-    max-width: 200px;
-  }
-
-}
 
   .floating-avatar {
     animation: float 4s ease-in-out infinite;
@@ -152,18 +171,21 @@ function Home2() {
     100% { transform: translateY(0px); }
   }
 
-  /* ===================== */
-  /* 🔥 SOCIAL ICON GLOW */
-  /* ===================== */
-
   .home-about-social-links {
     list-style: none;
     padding: 0;
     margin-top: 30px;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* makes responsive */
+    flex-wrap: wrap;
     gap: 20px;
+  }
+
+  /* 🔥 ADDED */
+  @media (max-width: 576px) {
+    .home-about-social-links {
+      gap: 12px;
+    }
   }
 
   .social-icons a {
@@ -180,7 +202,15 @@ function Home2() {
     position: relative;
   }
 
-  /* ✨ Default soft glow */
+  /* 🔥 ADDED */
+  @media (max-width: 576px) {
+    .social-icons a {
+      width: 45px;
+      height: 45px;
+      font-size: 1.4rem;
+    }
+  }
+
   .social-icons a::before {
     content: "";
     position: absolute;
@@ -194,7 +224,6 @@ function Home2() {
     transition: 0.4s ease;
   }
 
-  /* 🚀 Hover Animation */
   .social-icons a:hover {
     transform: translateY(-8px) scale(1.15);
     color: #fff;
@@ -208,7 +237,6 @@ function Home2() {
     filter: blur(25px);
   }
 
-  /* 💫 Soft pulse animation */
   .social-icons {
     animation: pulseGlow 3s infinite ease-in-out;
   }
@@ -222,19 +250,6 @@ function Home2() {
     }
     100% {
       filter: drop-shadow(0 0 0px #c770f0);
-    }
-  }
-
-  /* 📱 Responsive Improvements */
-  @media (max-width: 768px) {
-    .home-about-social-links {
-      gap: 15px;
-    }
-
-    .social-icons a {
-      width: 48px;
-      height: 48px;
-      font-size: 1.5rem;
     }
   }
 

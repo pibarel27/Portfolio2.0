@@ -10,6 +10,9 @@ import chatbot from "../../Assets/Projects/chatbot.png";
 import Portfolio from "../../Assets/Portfolio.png";
 import ChinguLyrics from "../../Assets/ChingLyrics.png"
 import CS from "../../Assets/Projects/CS.png"
+import DG from "../../Assets/Projects/DG.jpg"
+import PDD from "../../Assets/Projects/PDD.png"
+import AF from "../../Assets/Projects/AF.png"
 
 function Projects() {
   return (
@@ -102,6 +105,34 @@ function Projects() {
               title="Sign Language"
               description="Sign language is manual communication commonly used by people who are deaf. Sign language is not universal; people who are deaf from different countries speak different sign languages. The gestures or symbols in sign language are organized in a linguistic way."
               ghLink="https://github.com/pibarel27/Sign-Language"
+            />
+          </Col>
+            <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={DG}
+              isBlog={false}
+              title="DG Logger"
+              description="This project logs Diesel Generator (DG) ON/OFF timestamps using an ESP32, a DS3231 RTC, and Google Sheets as a cloud-based logbook via Google Apps Script Web App."
+              ghLink="https://github.com/pibarel27/DG_Status"
+            />
+          </Col>
+                      <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={PDD}
+              isBlog={false}
+              title="Plant Disease Detection"
+              description="Agri Disease Detection System Using Python Project Overview:The Agri Disease Detection System is a Python-based intelligent application designed to detect and classify various crop diseases using image processing and machine learning techniques. The system helps farmers identify plant diseases at an early stage, reducing crop loss and improving agricultural productivity."
+              ghLink="https://github.com/pibarel27/Plant-Disease-Detection"
+            />
+          </Col>
+                      <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={AF}
+              isBlog={false}
+              title="AutoFiller"
+              description="In live broadcasting environments like radio stations streaming to YouTube, copyright detection can instantly mute or block the stream. AutoFiller solves this problem by automatically switching to safe filler content whenever such an issue occurs.
+The application runs continuously in the background and manages content switching without manual intervention."
+              ghLink="https://github.com/pibarel27/AutoFiller"
             />
           </Col>
         </Row>

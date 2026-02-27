@@ -5,16 +5,16 @@ function Type() {
   return (
     <>
       <div className="type-wrapper">
-        <span className="static-text">I am a </span>
+        <span className="static-text">I am a&nbsp;</span>
 
         <span className="type-text">
           <Typewriter
             options={{
               strings: [
-                "Web Developer 💻",
-                "Freelancer 🚀",
-                "MERN Stack Developer 🔥",
-                "Open Source Contributor 🌍",
+                "Web Developer",
+                "Freelancer",
+                "MERN Stack Developer",
+                "Open Source Contributor",
               ],
               autoStart: true,
               loop: true,
@@ -25,64 +25,57 @@ function Type() {
         </span>
       </div>
 
-      {/* 🔥 Internal Styling */}
-      <style>{`
+   <style>{`
 
-        .type-wrapper {
-          font-size: 1.6rem;
-          font-weight: 500;
-          display: flex;
-          flex-wrap: wrap;
-          align-items: center;
-          animation: fadeIn 1.5s ease forwards;
-        }
+  .type-wrapper {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    font-size: clamp(1.1rem, 4vw, 1.6rem);
+    gap: 8px;                /* 🔥 proper spacing */
+    width: 100%;
+  }
 
-        .static-text {
-          margin-right: 8px;
-          color: #ccc;
-        }
+  .static-text {
+    color: #d1d1d1;
+    white-space: nowrap;
+  }
 
-        .type-text {
-          background: linear-gradient(45deg, #c770f0, #7c3aed);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          font-weight: 600;
-        }
+  .type-text {
+    background: linear-gradient(45deg, #c770f0, #7c3aed);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
+    min-height: 1.6em;       /* 🔥 prevents jump */
+    display: inline-flex;
+    align-items: center;
+  }
 
-        /* Blinking Cursor */
-        .Typewriter__cursor {
-          color: #c770f0;
-          font-weight: bold;
-          animation: blink 1s infinite;
-        }
+  .Typewriter__wrapper {
+    display: inline-block;
+  }
 
-        @keyframes blink {
-          0% { opacity: 1; }
-          50% { opacity: 0; }
-          100% { opacity: 1; }
-        }
+  .Typewriter__cursor {
+    color: #c770f0;
+    font-weight: 600;
+    margin-left: 2px;
+  }
 
-        /* Fade In Animation */
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
+  /* 🔥 Extra clean mobile spacing */
+  @media (max-width: 480px) {
+    .type-wrapper {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  }
 
-        @media (max-width: 768px) {
-          .type-wrapper {
-            font-size: 1.3rem;
-            justify-content: center;
-            text-align: center;
-          }
-        }
+`}</style>
 
-      `}</style>
+
     </>
   );
 }

@@ -27,27 +27,29 @@ function Footer() {
               <a
                 href="https://github.com/pibarel27"
                 style={{ color: "white" }}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiFillGithub />
               </a>
             </li>
+
             <li className="social-icons">
               <a
-                  href="https://twitter.com/MaisnamPibarel"
+                href="https://twitter.com/MaisnamPibarel"
                 style={{ color: "white" }}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiOutlineTwitter />
               </a>
             </li>
+
             <li className="social-icons">
               <a
                 href="https://wa.me/+918595089569"
                 style={{ color: "white" }}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiOutlineWhatsApp />
@@ -58,36 +60,98 @@ function Footer() {
               <a
                 href="https://www.linkedin.com/in/akash-maisnam-92726224b/"
                 style={{ color: "white" }}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaLinkedinIn />
               </a>
             </li>
+
             <li className="social-icons">
               <a
                 href="https://www.instagram.com/__cooldude69/"
                 style={{ color: "white" }}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiFillInstagram />
               </a>
             </li>
+
             <li className="social-icons">
               <a
                 href="https://www.facebook.com/pibarel1998"
                 style={{ color: "white" }}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiFillFacebook />
               </a>
             </li>
-            
           </ul>
         </Col>
       </Row>
+
+      <style>{`
+        .footer-icons {
+          display: flex;
+          justify-content: center;
+          // gap: 5px;
+          padding: 0;
+          list-style: none;
+        }
+
+        .footer-icons .social-icons a {
+          font-size: 1.2rem;   /* 🔥 reduced size */
+          transition: 0.3s ease;
+        }
+
+        .footer-icons .social-icons a:hover {
+          transform: scale(1.1);
+        }
+           .footer-icons {
+          display: flex;
+          justify-content: center;
+          gap: 12px;
+          padding: 0;
+          list-style: none;
+        }
+
+        .footer-icons .social-icons a {
+          font-size: 0.9rem;   /* 🔥 smaller icons */
+          color: white;
+          transition: 0.3s ease;
+        }
+
+        .footer-icons .social-icons a:hover {
+          transform: scale(1.08);
+        }
+          .footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+  }
+
+  /* 🔥 Smaller circle */
+  .footer-icons .social-icons a {
+    font-size: 0.85rem;        /* smaller icon */
+    width: 32px;               /* smaller circle */
+    height: 32px;              /* smaller circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    transition: 0.3s ease;
+  }
+
+  .footer-icons .social-icons a:hover {
+    transform: scale(1.08);
+  }
+      `}</style>
     </Container>
   );
 }

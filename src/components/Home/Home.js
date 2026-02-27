@@ -16,23 +16,17 @@ function Home() {
 
             {/* LEFT SIDE */}
             <Col md={7} className="home-header slide-left">
-
               <h1 className="heading">
-                Hi There!{" "}
-                <span className="wave">👋🏻</span>
+                Hi There! <span className="wave">👋🏻</span>
               </h1>
 
               <h1 className="heading-name">
-                I'M{" "}
-                <strong className="main-name">
-                  Pibarel Maisnam
-                </strong>
+                I'M <strong className="main-name">Pibarel Maisnam</strong>
               </h1>
 
               <div className="type-section">
                 <Type />
               </div>
-
             </Col>
 
             {/* RIGHT SIDE */}
@@ -41,7 +35,7 @@ function Home() {
                 <img
                   src={Pibarel}
                   alt="home pic"
-                  className="img-fluid floating-img"
+                  className="home-img"
                 />
               </div>
             </Col>
@@ -52,26 +46,36 @@ function Home() {
 
       <Home2 />
 
-      {/* 🔥 Internal Styling */}
       <style>{`
 
         .home-section {
           position: relative;
           padding-top: 80px;
-          padding-bottom: 50px;
+          padding-bottom: 60px;
           color: white;
+          background: transparent;
+          overflow-x: hidden;
+        }
+
+        .home-header {
+          text-align: left;
+        }
+
+        @media (max-width: 768px) {
+          .home-header {
+            text-align: center;
+            margin-bottom: 30px;
+          }
         }
 
         .heading {
-          font-size: 2.5rem;
+          font-size: clamp(1.8rem, 4vw, 2.5rem);
           font-weight: 600;
-          animation: fadeDown 1s ease forwards;
         }
 
         .heading-name {
-          font-size: 2.8rem;
+          font-size: clamp(2rem, 5vw, 2.8rem);
           margin-top: 10px;
-          animation: fadeUp 1.2s ease forwards;
         }
 
         .main-name {
@@ -81,117 +85,53 @@ function Home() {
         }
 
         .type-section {
-          padding-top: 40px;
-          font-size: 1.2rem;
-          animation: fadeUp 1.5s ease forwards;
+          padding-top: 30px;
         }
 
-        /* Wave Animation */
-        .wave {
-          display: inline-block;
-          animation: waveAnimation 2s infinite;
-          transform-origin: 70% 70%;
-        }
-
-        @keyframes waveAnimation {
-          0% { transform: rotate(0deg); }
-          15% { transform: rotate(14deg); }
-          30% { transform: rotate(-8deg); }
-          40% { transform: rotate(14deg); }
-          50% { transform: rotate(-4deg); }
-          60% { transform: rotate(10deg); }
-          70% { transform: rotate(0deg); }
-          100% { transform: rotate(0deg); }
-        }
-
-        /* Slide Animations */
-        .slide-left {
-          animation: slideLeft 1s ease-out forwards;
-        }
-
-        .slide-right {
-          animation: slideRight 1s ease-out forwards;
-        }
-
-        @keyframes slideLeft {
-          from {
-            transform: translateX(-100px);
-            opacity: 0;
-          }
-          to {
-            transform: translateX(0);
-            opacity: 1;
-          }
-        }
-
-        @keyframes slideRight {
-          from {
-            transform: translateX(100px);
-            opacity: 0;
-          }
-          to {
-            transform: translateX(0);
-            opacity: 1;
-          }
-        }
-
-        /* Fade Animations */
-        @keyframes fadeUp {
-          from {
-            opacity: 0;
-            transform: translateY(40px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes fadeDown {
-          from {
-            opacity: 0;
-            transform: translateY(-40px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        /* Floating Image */
+        /* IMAGE FIX */
         .image-wrapper {
-          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
 
-        .floating-img {
-          max-height: 450px;
+        .home-img {
+          width: 100%;
+          max-width: 420px;   
+          height: auto;
+          object-fit: contain;
           animation: float 4s ease-in-out infinite;
           transition: 0.4s ease;
         }
 
-        .floating-img:hover {
+        @media (max-width: 992px) {
+          .home-img {
+            max-width: 350px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .home-img {
+            max-width: 280px;
+            margin-top: 20px;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .home-img {
+            max-width: 230px;
+          }
+        }
+
+        .home-img:hover {
           transform: scale(1.05);
           filter: drop-shadow(0 0 20px #c770f0);
         }
 
         @keyframes float {
           0% { transform: translateY(0px); }
-          50% { transform: translateY(-15px); }
+          50% { transform: translateY(-12px); }
           100% { transform: translateY(0px); }
-        }
-
-        @media (max-width: 768px) {
-          .heading {
-            font-size: 2rem;
-          }
-
-          .heading-name {
-            font-size: 2.2rem;
-          }
-
-          .type-section {
-            text-align: center;
-          }
         }
 
       `}</style>
