@@ -38,7 +38,9 @@ function Type() {
     gap: 8px;                /* 🔥 proper spacing */
     width: 100%;
   }
-
+  .type-text {
+  white-space: nowrap;
+  }
   .static-text {
     color: #d1d1d1;
     white-space: nowrap;
@@ -65,8 +67,16 @@ function Type() {
     margin-left: 2px;
   }
 
-  /* 🔥 Extra clean mobile spacing */
-  @media (max-width: 480px) {
+
+
+  @media (max-width: 768px) {
+
+  .type-wrapper {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+}  @media (max-width: 480px) {
     .type-wrapper {
       font-size: 1.1rem;
       line-height: 1.6;

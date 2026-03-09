@@ -110,12 +110,21 @@ function Home() {
           }
         }
 
-        @media (max-width: 768px) {
-          .home-img {
-            max-width: 280px;
-            margin-top: 20px;
-          }
+       @media (max-width: 768px) {
+
+        .heading {
+          font-size: 1.8rem;
         }
+
+        .heading-name {
+          font-size: 2rem;
+        }
+
+        .type-section {
+          padding-top: 20px;
+        }
+
+      }
 
         @media (max-width: 576px) {
           .home-img {

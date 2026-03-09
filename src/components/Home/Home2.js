@@ -121,21 +121,18 @@ function Home2() {
     margin-bottom: 20px;
   }
 
-  /* 🔥 ADDED */
-  @media (max-width: 768px) {
-    .about-title {
-      font-size: 2em;
-      text-align: center;
-    }
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2em;
+    text-align: left;
   }
 
   .home-about-body {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    opacity: 0.9;
+    font-size: 1rem;
+    text-align: left;
   }
+}
 
-  /* 🔥 ADDED */
   @media (max-width: 768px) {
     .home-about-body {
       font-size: 1rem;
