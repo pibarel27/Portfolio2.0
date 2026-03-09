@@ -151,6 +151,35 @@ function Footer() {
   .footer-icons .social-icons a:hover {
     transform: scale(1.08);
   }
+    /* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+
+  .footer {
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .footer-copywright h3 {
+    font-size: 0.9rem;
+    margin: 5px 0;
+  }
+
+  .footer-body {
+    margin-top: 10px;
+  }
+
+  .footer-icons {
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .footer-icons .social-icons a {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
+  }
+
+}
       `}</style>
     </Container>
   );
