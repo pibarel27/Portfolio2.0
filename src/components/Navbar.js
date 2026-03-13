@@ -6,6 +6,7 @@ import logo from "../Assets/logo.png";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
+import { HiOutlineBriefcase } from "react-icons/hi";
 import { ImBlog } from "react-icons/im";
 import {
   AiFillStar,
@@ -94,7 +95,7 @@ function NavBar() {
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link as={Link} to="/Experience" onClick={() => updateExpanded(false)}>
-                  <CgFileDocument /> Work
+                  <HiOutlineBriefcase /> Work
                 </Nav.Link>
               </Nav.Item>
 
