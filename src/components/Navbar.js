@@ -92,6 +92,11 @@ function NavBar() {
                   <CgFileDocument /> Resume
                 </Nav.Link>
               </Nav.Item>
+              <Nav.Item>
+                <Nav.Link as={Link} to="/Experience" onClick={() => updateExpanded(false)}>
+                  <CgFileDocument /> Work
+                </Nav.Link>
+              </Nav.Item>
 
               <Nav.Item>
                 <Nav.Link
