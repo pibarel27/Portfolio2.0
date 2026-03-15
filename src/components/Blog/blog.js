@@ -7,33 +7,7 @@ import { motion } from "framer-motion";
 /* ---------------- BLOG DATA ---------------- */
 
 export const datablog = [
-// {
-// id: "umang-lai-haraoba",
-// title: "Umang Lai Haraoba Festival",
-// description: "A sacred ritual festival celebrated in Manipur.",
-// content: `
-// <h2>Umang Lai Haraoba</h2>
-// <p>Umang Lai Haraoba is one of the oldest and most culturally significant festivals of Manipur.</p>
-// `
-// },
-// {
-// id: "moirang-history",
-// title: "History of Moirang",
-// description: "Moirang is one of the oldest cultural centres in Manipur.",
-// content: `
-// <h2>History of Moirang</h2>
-// <p>Moirang is an ancient principality of Manipur known for its rich cultural heritage.</p>
-// `
-// },
-// {
-// id: "khamba-thoibi",
-// title: "Khamba Thoibi",
-// description: "The legendary love story of Moirang kingdom.",
-// content: `
-// <h2>Khamba Thoibi</h2>
-// <p>The legend of Khamba and Thoibi is one of the most famous stories in Manipuri folklore.</p>
-// `
-// }
+
 {
 id: "aiml-chatbot",
 title: "Development of a Chatbot Using AIML Technologies",
@@ -170,7 +144,7 @@ transition={{ duration:0.5, delay:i*0.2 }}
 <p>{data.description}</p>
 
 <Link to={`/blog/${data.id}`} className="blog-btn">
-Read Article →
+Read  →
 </Link>
 
 </Card.Body>
