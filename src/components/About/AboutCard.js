@@ -11,10 +11,10 @@ function AboutCard() {
 
             <p className="about-text">
               Hi Everyone, I am <span className="purple">Pibarel Maisnam</span>
-              from <span className="purple">Imphal, India.</span>
-              <br />
+              from <span className="purple"> Imphal, India.</span>
+              {/* <br />
               I am a student at <span className="purple">Manipur Technical University</span>.
-              <br />
+              <br /> */}
               Apart from coding, some other activities that I love to do!
             </p>
 
