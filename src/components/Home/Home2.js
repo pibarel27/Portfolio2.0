@@ -35,7 +35,6 @@ function Home2() {
               <b className="purple"> Web Technologies and Products</b> and also in areas related to
               <b className="purple"> Blockchain.</b>
               <br /><br />
-
               Whenever possible, I apply my passion using
               <b className="purple"> Node.js</b> and
               <b className="purple"> React.js, Next.js</b>

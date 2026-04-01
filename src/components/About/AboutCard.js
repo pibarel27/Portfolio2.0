@@ -10,14 +10,14 @@ function AboutCard() {
           <blockquote className="blockquote mb-0">
 
             <p className="about-text">
-              Hi Everyone, I am <span className="purple">Pibarel Maisnam</span>
-              from <span className="purple"> Imphal, India.</span>
-              {/* <br />
-              I am a student at <span className="purple">Manipur Technical University</span>.
-              <br /> */}
-              Apart from coding, some other activities that I love to do!
+              Hi Everyone, I am <span className="purple">Pibarel Maisnam </span>
+              from <span className="purple"> Imphal, India.</span> 
+             
+              <br />
+               Apart from coding, some other activities that I love to do!
+              {/* I am a student at <span className="purple">Manipur Technical University</span>. */}
+              <br />
             </p>
-
             <ul className="about-list">
               <li className="about-activity">
                 <ImPointRight /> Playing Games
@@ -31,7 +31,7 @@ function AboutCard() {
             </ul>
 
             <p className="quote-text">
-              "Embrace the power of technology, for in its evolution lies the blueprint of our future and the potential to transform the world."
+            Harness the power of technology—within its evolution lies the foundation of our future and the ability to reshape the world.
             </p>
 
             <footer className="blockquote-footer modern-footer">
