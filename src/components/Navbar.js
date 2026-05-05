@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.png";
-import Button from "react-bootstrap/Button";
 import { FaBlog } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
 import { HiOutlineBriefcase } from "react-icons/hi";
 import {
@@ -19,119 +18,167 @@ import { CgFileDocument } from "react-icons/cg";
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
+  const [showNav, setShowNav] = useState(true);
 
-  function scrollHandler() {
-    if (window.scrollY >= 20) {
-      updateNavbar(true);
-    } else {
-      updateNavbar(false);
-    }
-  }
+  const lastScrollY = useRef(0); // ✅ FIX
+
+  const location = useLocation();
+
+  // ✅ Hide only on blog detail page
+  const hideNavbar = /^\/blog\/.+/.test(location.pathname);
 
   useEffect(() => {
-    function handleDocumentClick(event) {
+    const handleScroll = () => {
+      // Sticky background
+      if (window.scrollY >= 20) {
+        updateNavbar(true);
+      } else {
+        updateNavbar(false);
+      }
+
+      // Hide on scroll down, show on scroll up
+      if (window.scrollY > lastScrollY.current) {
+        setShowNav(false);
+      } else {
+        setShowNav(true);
+      }
+
+      lastScrollY.current = window.scrollY;
+    };
+
+    const handleClick = (event) => {
       if (expand && !event.target.closest(".navbar")) {
         updateExpanded(false);
       }
-    }
+    };
 
-    window.addEventListener("scroll", scrollHandler);
-    document.addEventListener("click", handleDocumentClick);
+    window.addEventListener("scroll", handleScroll);
+    document.addEventListener("click", handleClick);
 
     return () => {
-      window.removeEventListener("scroll", scrollHandler);
-      document.removeEventListener("click", handleDocumentClick);
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("click", handleClick);
     };
   }, [expand]);
 
   return (
     <>
-      <Navbar
-        expanded={expand}
-        fixed="top"
-        expand="md"
-        className={`modern-navbar ${navColour ? "sticky" : ""}`}
-      >
-        <Container>
-          <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
-            <img src={logo} className="img-fluid logo" alt="brand" />
-          </Navbar.Brand>
+      {!hideNavbar && (
+        <Navbar
+          expanded={expand}
+          fixed="top"
+          expand="md"
+          className={`modern-navbar ${navColour ? "sticky" : ""} ${
+            showNav ? "show-nav" : "hide-nav"
+          }`}
+        >
+          <Container>
+            <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
+              <img src={logo} className="img-fluid logo" alt="brand" />
+            </Navbar.Brand>
 
-          <Navbar.Toggle
-            aria-controls="responsive-navbar-nav"
-            onClick={() => updateExpanded(expand ? false : "expanded")}
-            className="custom-toggler"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </Navbar.Toggle>
+            <Navbar.Toggle
+              onClick={() => updateExpanded(expand ? false : "expanded")}
+              className="custom-toggler"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </Navbar.Toggle>
 
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ms-auto nav-links">
-
-              <Nav.Item>
+            <Navbar.Collapse>
+              <Nav className="ms-auto nav-links">
                 <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
                   <AiOutlineHome /> Home
                 </Nav.Link>
-              </Nav.Item>
 
-              <Nav.Item>
                 <Nav.Link as={Link} to="/about" onClick={() => updateExpanded(false)}>
                   <AiOutlineUser /> About
                 </Nav.Link>
-              </Nav.Item>
 
-              <Nav.Item>
                 <Nav.Link as={Link} to="/project" onClick={() => updateExpanded(false)}>
                   <AiOutlineFundProjectionScreen /> Projects
                 </Nav.Link>
-              </Nav.Item>
 
-              <Nav.Item>
                 <Nav.Link as={Link} to="/resume" onClick={() => updateExpanded(false)}>
                   <CgFileDocument /> Resume
                 </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
+
                 <Nav.Link as={Link} to="/Experience" onClick={() => updateExpanded(false)}>
                   <HiOutlineBriefcase /> Work
                 </Nav.Link>
-              </Nav.Item>
 
-              <Nav.Item>
-             <Nav.Link as={Link} to="/blog" onClick={() => updateExpanded(false)}>
-             <FaBlog  /> Blog
-             </Nav.Link>
-             </Nav.Item>
+                <Nav.Link as={Link} to="/blog" onClick={() => updateExpanded(false)}>
+                  <FaBlog /> Blog
+                </Nav.Link>
 
-              <Nav.Item className="fork-btn">
-                <Button
-                  href="https://github.com/pibarel27"
-                  target="_blank"
-                  className="fork-btn-inner"
-                >
-                  <CgGitFork /> <AiFillStar />
-                </Button>
-              </Nav.Item>
+                <Nav.Item className="fork-btn">
+  <a
+    href="https://github.com/pibarel27"
+    target="_blank"
+    rel="noreferrer"
+    className="fork-pill"
+  >
+    <CgGitFork className="icon" />
+    <AiFillStar className="icon" />
+  </a>
+</Nav.Item>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+      )}
 
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-
-      {/* 🔥 Internal Styling */}
       <style>{`
         .modern-navbar {
           backdrop-filter: blur(10px);
           background: rgba(15, 12, 41, 0.6);
-          transition: all 0.4s ease;
+          transition: transform 0.4s ease, background 0.4s ease;
           padding: 10px 0;
         }
+
+        .fork-pill {
+  margin-left: 20px;
+  background: linear-gradient(135deg, #c770f0, #8a2be2);
+  padding: 10px 18px;
+  border-radius: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/* Icons */
+.fork-pill .icon {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover animation */
+.fork-pill:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(199, 112, 240, 0.7);
+  color: white;
+}
+
+/* Icon hover bounce */
+.fork-pill:hover .icon {
+  transform: translateY(-2px);
+}
 
         .modern-navbar.sticky {
           background: rgba(20, 20, 60, 0.95);
           box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+        }
+
+        .show-nav {
+          transform: translateY(0);
+        }
+
+        .hide-nav {
+          transform: translateY(-100%);
         }
 
         .logo {
@@ -148,10 +195,8 @@ function NavBar() {
           margin-left: 20px;
           position: relative;
           font-weight: 500;
-          transition: 0.3s;
         }
 
-        /* Underline animation */
         .nav-links .nav-link::after {
           content: "";
           position: absolute;
@@ -171,28 +216,19 @@ function NavBar() {
           color: #c770f0 !important;
         }
 
-        /* GitHub Button */
         .fork-btn-inner {
+          margin-left: 20px;
           background: linear-gradient(45deg, #c770f0, #7928ca);
           border: none;
-          padding: 6px 14px;
           border-radius: 25px;
-          transition: 0.3s ease;
         }
 
-        .fork-btn-inner:hover {
-          transform: scale(1.05);
-          box-shadow: 0 0 15px #c770f0;
-        }
-
-        /* Hamburger Animation */
         .custom-toggler span {
           display: block;
           width: 25px;
           height: 3px;
           margin: 5px;
           background: white;
-          transition: 0.3s;
         }
 
         @media (max-width: 768px) {

@@ -98,6 +98,96 @@ AIML chatbots are widely used in several areas including:
 <p>
 The development of chatbots using AIML technology demonstrates how artificial intelligence can be used to improve human-computer interaction. Although modern chatbots often rely on machine learning and deep learning techniques, AIML remains an effective approach for building rule-based conversational systems. With proper knowledge design and pattern creation, AIML chatbots can provide efficient automated responses and enhance user engagement in many digital platforms.
 </p>`
+},
+
+{
+id: "esp32-dg-logger",
+title: "ESP32-Based Diesel Generator Status Logger",
+description: "Smart IoT system for monitoring DG status with offline buffering and Google Sheets logging.",
+content: `
+<h2>Introduction</h2>
+<p>
+In industrial environments, Diesel Generators (DGs) are critical for ensuring uninterrupted power supply. However, manual logging of DG operations is often unreliable and inefficient. This project introduces an IoT-based solution using ESP32 to automate DG monitoring and logging.
+</p>
+
+<h2>Problem Statement</h2>
+<ul>
+<li>Manual logging is error-prone</li>
+<li>Internet connectivity is not always available</li>
+<li>No reliable backup system for data</li>
+</ul>
+
+<h2>Project Objectives</h2>
+<ul>
+<li>Automatically detect DG ON/OFF status</li>
+<li>Record accurate timestamps</li>
+<li>Upload data to Google Sheets</li>
+<li>Store data offline during network failure</li>
+</ul>
+
+<h2>System Overview</h2>
+<p>
+The system uses ESP32 to read DG status, RTC for accurate timekeeping, Wi-Fi for cloud upload, and a ring buffer for offline storage.
+</p>
+
+<h2>Hardware Components</h2>
+<ul>
+<li>ESP32</li>
+<li>DS3231 RTC</li>
+<li>DG Input Signal</li>
+<li>Status LEDs</li>
+<li>Power Supply</li>
+</ul>
+
+<h2>Software Technologies</h2>
+<ul>
+<li>Arduino Framework</li>
+<li>Wi-Fi & HTTP Protocol</li>
+<li>Google Apps Script</li>
+<li>NTP Synchronization</li>
+<li>Ring Buffer Algorithm</li>
+</ul>
+
+<h2>DG Status Detection</h2>
+<p>
+GPIO pin detects generator state:
+<br/>LOW = DG ON  
+<br/>HIGH = DG OFF
+</p>
+
+<h2>False Trigger Protection</h2>
+<p>
+A 60-second delay ensures that electrical noise does not cause incorrect logging.
+</p>
+
+<h2>RTC (Real-Time Clock)</h2>
+<p>
+Maintains accurate time even without internet and syncs with NTP periodically.
+</p>
+
+<h2>Offline Storage (Ring Buffer)</h2>
+<p>
+Stores data when Wi-Fi is unavailable and uploads automatically when connection is restored.
+</p>
+
+<h2>Cloud Integration</h2>
+<p>
+Data is uploaded to Google Sheets using a secure web app, storing timestamp and DG status.
+</p>
+
+<h2>Applications</h2>
+<ul>
+<li>Telecom Towers</li>
+<li>Power Stations</li>
+<li>Industrial Automation</li>
+<li>Smart Grid Systems</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+This ESP32-based DG logger is a reliable, scalable, and industry-ready solution for automated monitoring with zero data loss.
+</p>
+`
 }
 ];
 
