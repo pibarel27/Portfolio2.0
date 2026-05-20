@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Particle from "../Particle";
 import Github from "./Github";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
@@ -29,8 +28,6 @@ function About() {
 
   return (
     <Container fluid className="about-section upgraded-about">
-      <Particle />
-
       <Container>
 
         {/* TOP SECTION */}

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Container,  Modal } from "react-bootstrap";
 import { motion } from "framer-motion";
-import Particle from "../Particle";
 
 import skillwinner from "../../Assets/experience/skillwinner.png";
 import codexp from "../../Assets/experience/codexp.png";
@@ -49,8 +48,6 @@ function Experience() {
   return (
     <>
       <Container fluid className="timeline-section">
-        <Particle />
-
         <Container>
           <motion.h1
             className="timeline-title"

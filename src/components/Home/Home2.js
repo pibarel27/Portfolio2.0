@@ -214,8 +214,8 @@ function Home2() {
     height: 100%;
     border-radius: 50%;
     background: #c770f0;
-    opacity: 0.15;
-    filter: blur(15px);
+    opacity: 0.1;
+    filter: blur(12px);
     z-index: -1;
     transition: 0.4s ease;
   }
@@ -223,14 +223,14 @@ function Home2() {
   .social-icons a:hover {
     transform: translateY(-8px) scale(1.15);
     color: #fff;
-    box-shadow: 0 0 15px #c770f0,
-                0 0 30px #c770f0,
-                0 0 45px #7c3aed;
+    box-shadow: 0 0 8px #c770f0,
+                0 0 18px #c770f0,
+                0 0 30px #7c3aed;
   }
 
   .social-icons a:hover::before {
-    opacity: 0.6;
-    filter: blur(25px);
+    opacity: 0.35;
+    filter: blur(18px);
   }
 
   .social-icons {
@@ -242,7 +242,7 @@ function Home2() {
       filter: drop-shadow(0 0 0px #c770f0);
     }
     50% {
-      filter: drop-shadow(0 0 10px #c770f0);
+      filter: drop-shadow(0 0 6px #c770f0);
     }
     100% {
       filter: drop-shadow(0 0 0px #c770f0);

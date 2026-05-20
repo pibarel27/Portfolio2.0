@@ -11,10 +11,10 @@ function Type() {
           <Typewriter
             options={{
               strings: [
+                "Founder Of Chingu Pvt. Ltd.",
                 "Web Developer",
-                "Freelancer",
                 "MERN Stack Developer",
-                "Open Source Contributor",
+    
               ],
               autoStart: true,
               loop: true,

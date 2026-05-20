@@ -17,6 +17,7 @@ import {
   Navigate
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import Particle from "./components/Particle";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -36,6 +37,7 @@ function App() {
     <Router>
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
+        <Particle />
         <Navbar />
         <ScrollToTop />
         <Routes>

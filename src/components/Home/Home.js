@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Pibarel from "../../Assets/Pibarel.png";
-import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
 
@@ -9,8 +8,6 @@ function Home() {
   return (
     <section>
       <Container fluid className="home-section" id="home">
-        <Particle />
-
         <Container className="home-content">
           <Row className="align-items-center">
 
